@@ -38,7 +38,7 @@ public class CDVCutout extends CordovaPlugin {
       if(statusBarHeight > convertDpToPixel(24)) {
         RelativeLayout.LayoutParams = topbarLp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         topbarlp.setMargins(0, statusBarHeight, 0, 0);
-        topbar.setLayoutParams(topbarlp)
+        topbar.setLayoutParams(topbarlp);
       }
       callbackContext.success(statusBarHeight);
     }
