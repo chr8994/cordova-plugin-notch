@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-cutout",
+  "name": "cordova-plugin-notch-fix",
   "version": "1.0.10",
-  "description": "Plugin detecting phone with screen cut outs",
+  "description": "Plugin to return statusbar height and adjust if there is a notch",
   "cordova": {
-    "id": "cordova-plugin-cutout",
+    "id": "cordova-plugin-notch-fix",
     "platforms": [
       "android",
       "ios"
@@ -11,17 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuk/cordova-plugin-notch.git"
+    "url": "git+https://github.com/chr8994/cordova-plugin-notch.git"
   },
   "keywords": [
     "ecosystem:cordova",
     "cordova-android",
     "cordova-ios"
   ],
-  "author": "Vuk Stankovic",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vuk/cordova-plugin-notch/issues"
-  },
-  "homepage": "https://github.com/vuk/cordova-plugin-notch#readme"
+  "author": "Christian Gomez",
+  "license": "MIT"
 }
