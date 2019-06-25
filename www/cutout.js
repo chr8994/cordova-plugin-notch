@@ -1,9 +1,9 @@
 var exec = require('cordova/exec');
 
-exports.has = function () {
+exports.adjust = function () {
     return new Promise((resolve, reject) => {
-        exec((hasCutout) => {
-            resolve(hasCutout === 'true');
-        }, reject, 'Cutout', 'has');
+        exec((statusBarHeight) => {
+            resolve(statusBarHeight);
+        }, reject, 'Cutout', 'getStatusBarHeight');
     })
 };
