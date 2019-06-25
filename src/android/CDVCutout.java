@@ -23,23 +23,8 @@ public class CDVCutout extends CordovaPlugin {
         return false;
     }
 
-    public static int convertDpToPixel(float dp) {
-      DisplayMetrics metrics = cordova.getSystem().getDisplayMetrics();
-      float px = dp * (metrics.densityDpi / 160f);
-      return Math.round(px);
-    }
-
     private void adjust(CallbackContext callbackContext) {
-      int statusBarHeight = 0;
-      int resourceId = cordova.getResources().getIdentifier("status_bar_height", "dimen", "android");
-      if (resourceId > 0) {
-          statusBarHeight = cordova.getResources().getDimensionPixelSize(resourceId);
-      }
-      if(statusBarHeight > convertDpToPixel(24)) {
-        RelativeLayout.LayoutParams topbarLp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        topbarLp.setMargins(0, statusBarHeight, 0, 0);
-        topbarLp.setLayoutParams(topbarLp);
-      }
+      int statusBarHeight = cordova.getActivity().getWindow().getDecorView().getRootWindowInsets().getDisplayCutout().getSafeInsetTop();
       callbackContext.success(statusBarHeight);
     }
 
