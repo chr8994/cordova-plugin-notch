@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-notch-fix",
-  "version": "1.0.10",
+  "version": "1.2.1",
   "description": "Plugin to return statusbar height and adjust if there is a notch",
   "cordova": {
     "id": "cordova-plugin-notch-fix",
